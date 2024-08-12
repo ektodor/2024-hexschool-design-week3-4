@@ -1,0 +1,127 @@
+// RWD
+@mixin pad {
+  @media (max-width: 1300px) {
+    @content;
+  }
+}
+
+@mixin mobile {
+  @media (max-width: 768px) {
+    @content;
+  }
+}
+
+.title {
+  display: flex;
+  &::before {
+    display: inline-block;
+    content: "";
+    border-right: 8px solid map-get($map: $colors, $key: primary);
+    margin-right: 16px;
+    height: 72px;
+    @include mobile {
+      height: 36px;
+    }
+  }
+}
+
+.select {
+  margin-top: 33px;
+  margin-bottom: 41px;
+  &-area {
+    padding: 6px 12px;
+    width: 100%;
+    font-size: 18px;
+    color: #495057;
+    border: 1px solid #ced4da;
+  }
+}
+
+.location-card {
+  &-title {
+    padding: 8px 24px;
+    font-size: 24px;
+    border: 1px solid $grey-20;
+  }
+  &-body {
+    padding: 16px 24px;
+
+    border: 1px solid $grey-20;
+    p {
+      font-size: 20px;
+    }
+    .d-flex {
+      &:not(:last-child) {
+        margin-bottom: 8px;
+      }
+    }
+    span {
+      margin-right: 11px;
+    }
+  }
+  &-button {
+    display: block;
+    background-color: black;
+    color: white;
+    font-size: 19px;
+    border: 1px solid $grey-20;
+    text-align: center;
+    padding: 16px 0;
+  }
+}
+
+.breadcrumb {
+  .active {
+    color: map-get($map: $colors, $key: primary);
+    pointer-events: none;
+    cursor: default;
+    text-decoration: none;
+  }
+  a {
+    color: black;
+    font-size: 16px;
+    &:hover {
+      border-bottom: 2px solid map-get($map: $colors, $key: primary);
+    }
+  }
+  li {
+    &:not(:last-child)::after {
+      content: " / ";
+      white-space: pre;
+    }
+  }
+}
+
+.tag {
+  font-weight: bold;
+  font-size: 24px;
+  color: map-get($map: $colors, $key: primary);
+}
+
+.blog:hover {
+  box-shadow: 10px 5px 10px gray;
+  border-radius: 5px;
+}
+
+.map {
+  @include mobile {
+  }
+  @include pad {
+    height: 414px;
+  }
+}
+
+.line-clamp {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 6;
+  overflow: hidden;
+}
+
+// .glass-img {
+//   object-fit: cover;
+//   object-position: center;
+//   @include mobile {
+//     height: 136px;
+//   }
+// }

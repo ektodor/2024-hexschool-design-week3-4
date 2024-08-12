@@ -1,0 +1,26 @@
+.footer {
+  &-icon {
+    width: 48px;
+    height: 48px;
+    &:hover {
+      transform: scale(1.2);
+      transition-duration: 1s;
+    }
+    @include pad {
+      width: 40px;
+      height: 40px;
+    }
+    @include mobile {
+      width: 24px;
+      height: 24px;
+    }
+  }
+  &-link {
+    color: $white;
+    border-bottom: 1px solid transparent;
+    &:hover {
+      transition-duration: 0.2s;
+      border-bottom: 1px solid white;
+    }
+  }
+}

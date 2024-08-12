@@ -1,0 +1,77 @@
+$container-s: 100%;
+$container-m: 696px;
+$container-l: 1296px;
+
+// color
+$red-aa: #aa0601;
+$red-9f: #9f1213;
+$red-65: #650300;
+
+$linen-fb: #fbf2f2; // 亞麻色
+$linen-de: #dee2e6;
+$linen-f2: #f2f2f2;
+$linen-dc: #dcdcdc;
+$linen-ce: #ced4da;
+
+$grey-70: #707070;
+$grey-55: #555555;
+$grey-49: #495057;
+
+$black-21: #212529;
+$grey-29: #00000029;
+$grey-20: #00000020;
+$black: #000000;
+
+$brown-b7: #b75929;
+$brown-5f: #5f3e2d;
+
+$white: #ffffff;
+
+// 格線參數
+$col-sum: 12;
+$gutter: 24px;
+
+// 距離
+$spacer: 1rem;
+$spacers: (
+  0: 0,
+  0_25: $spacer * 0.25,
+  0_5: $spacer * 0.5,
+  0_75: $spacer * 0.75,
+  1: $spacer,
+  1_25: $spacer * 1.25,
+  1_5: $spacer * 1.5,
+  1_75: $spacer * 1.75,
+  2: $spacer * 2,
+  2_25: $spacer * 2.25,
+  2_5: $spacer * 2.5,
+  3: $spacer * 3,
+  3_75: $spacer * 3.75,
+  4: $spacer * 4,
+  5: $spacer * 5,
+  6: $spacer * 6,
+);
+
+// 字體大小
+$font-size: 1rem;
+$font-sizes: (
+  1: $font-size,
+  1_25: $font-size * 1.25,
+  1_5: $font-size * 1.5,
+  1_75: $font-size * 1.75,
+  2: $font-size * 2,
+  2_25: $font-size * 2.25,
+  2_5: $font-size * 2.5,
+  2_75: $font-size * 2.75,
+  3: $font-size * 3,
+  4: $font-size * 4,
+);
+
+$colors: (
+  "primary": $red-aa,
+  "secondary": $red-65,
+  "linen": $linen-fb,
+  "white": $white,
+  "black": $black,
+  "grey": $grey-55,
+);

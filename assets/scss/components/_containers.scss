@@ -1,0 +1,45 @@
+// 格線系統
+.container {
+  width: $container-l;
+  padding-left: calc($gutter * 0.5);
+  padding-right: calc($gutter * 0.5);
+  margin: 0 auto;
+  @include pad {
+    width: $container-m;
+  }
+  @include mobile {
+    width: $container-s;
+  }
+}
+
+@mixin make-grid($cols, $breakpoint: null) {
+  @for $num from 1 through $cols {
+    @if $breakpoint == null {
+      .col-#{$num} {
+        width: calc(100% * (#{$num} / #{$cols}));
+        padding-right: calc($gutter * 0.5);
+        padding-left: calc($gutter * 0.5);
+      }
+    } @else {
+      .col-#{$breakpoint}-#{$num} {
+        width: calc(100% * (#{$num} / #{$cols}));
+        padding-right: calc($gutter * 0.5);
+        padding-left: calc($gutter * 0.5);
+      }
+    }
+  }
+}
+
+.row {
+  margin-right: calc($gutter * -0.5);
+  margin-left: calc($gutter * -0.5);
+  display: flex;
+  flex-wrap: wrap;
+  @include make-grid($col-sum);
+  @include pad {
+    @include make-grid(12, "md");
+  }
+  @include mobile {
+    @include make-grid(4, "sm");
+  }
+}

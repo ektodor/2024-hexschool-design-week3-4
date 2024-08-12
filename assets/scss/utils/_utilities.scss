@@ -1,0 +1,314 @@
+.h {
+  &-100 {
+    height: 100%;
+  }
+}
+.w {
+  &-50 {
+    width: 50%;
+  }
+  &-100 {
+    width: 100%;
+  }
+  @include pad {
+    &-md-100 {
+      width: 100%;
+    }
+  }
+}
+.d {
+  &-flex {
+    display: flex;
+  }
+  @include mobile {
+    &-sm-block {
+      display: block;
+    }
+    &-sm-none {
+      display: none;
+    }
+    &-sm-flex {
+      display: flex;
+    }
+  }
+  @include pad {
+    &-md-flex {
+      display: flex;
+    }
+  }
+}
+.m {
+  &l-auto {
+    margin-left: auto;
+  }
+  &r-auto {
+    margin-right: auto;
+  }
+}
+.flex-wrap {
+  flex-wrap: wrap;
+  @include pad {
+    &-md {
+      flex-wrap: wrap;
+    }
+  }
+}
+
+.flex-direction {
+  @include pad {
+    &-md-col {
+      flex-direction: column;
+    }
+  }
+  @include mobile {
+    &-sm-col {
+      flex-direction: column;
+    }
+  }
+}
+@each $key, $value in $spacers {
+  .p {
+    &t-#{$key} {
+      padding-top: $value;
+    }
+    &b-#{$key} {
+      padding-bottom: $value;
+    }
+    &l-#{$key} {
+      padding-left: $value;
+    }
+    &r-#{$key} {
+      padding-right: $value;
+    }
+  }
+  .m {
+    &t-#{$key} {
+      margin-top: $value;
+    }
+    &b-#{$key} {
+      margin-bottom: $value;
+    }
+    &l-#{$key} {
+      margin-left: $value;
+    }
+    &r-#{$key} {
+      margin-right: $value;
+    }
+  }
+  .g {
+    &-#{$key} {
+      gap: $value;
+    }
+  }
+}
+@each $key, $value in $spacers {
+  @include pad {
+    .p {
+      &t-md-#{$key} {
+        padding-top: $value;
+      }
+      &b-md-#{$key} {
+        padding-bottom: $value;
+      }
+      &l-md-#{$key} {
+        padding-left: $value;
+      }
+      &r-md-#{$key} {
+        padding-right: $value;
+      }
+    }
+    .m {
+      &t-md-#{$key} {
+        margin-top: $value;
+      }
+      &b-md-#{$key} {
+        margin-bottom: $value;
+      }
+      &l-md-#{$key} {
+        margin-left: $value;
+      }
+      &r-md-#{$key} {
+        margin-right: $value;
+      }
+    }
+  }
+}
+
+@each $key, $value in $spacers {
+  @include mobile {
+    .p {
+      &t-sm-#{$key} {
+        padding-top: $value;
+      }
+      &b-sm-#{$key} {
+        padding-bottom: $value;
+      }
+      &l-sm-#{$key} {
+        padding-left: $value;
+      }
+      &r-sm-#{$key} {
+        padding-right: $value;
+      }
+    }
+    .m {
+      &t-sm-#{$key} {
+        margin-top: $value;
+      }
+      &b-sm-#{$key} {
+        margin-bottom: $value;
+      }
+      &l-sm-#{$key} {
+        margin-left: $value;
+      }
+      &r-sm-#{$key} {
+        margin-right: $value;
+      }
+    }
+    .g {
+      &-sm-#{$key} {
+        gap: $value;
+      }
+    }
+  }
+}
+// bg
+.bg- {
+  &primary {
+    background: $red-aa;
+  }
+  &secondary {
+    background: map-get($map: $colors, $key: secondary);
+  }
+  &linen {
+    background: $linen-fb;
+  }
+  &white {
+    background: $white;
+  }
+}
+@each $key, $var in $colors {
+  .text-#{$key} {
+    color: $var;
+  }
+}
+.text-align {
+  &-r {
+    text-align: right;
+  }
+  &-c {
+    text-align: center;
+  }
+  &-l {
+    text-align: left;
+  }
+}
+
+// font-size
+@each $key, $val in $font-sizes {
+  .fs-#{$key} {
+    font-size: $val;
+  }
+}
+
+// font-size
+@each $key, $val in $font-sizes {
+  @include pad {
+    .fs-md-#{$key} {
+      font-size: $val;
+    }
+  }
+}
+
+// font-size
+@each $key, $val in $font-sizes {
+  @include mobile {
+    .fs-sm-#{$key} {
+      font-size: $val;
+    }
+  }
+}
+
+.fw- {
+  &900 {
+    font-weight: 900;
+  }
+  &bold {
+    font-weight: bold;
+  }
+  &medium {
+    font-weight: 500;
+  }
+}
+
+.fst- {
+  &italic {
+    font-style: italic;
+  }
+}
+
+.justify-content {
+  &-c {
+    justify-content: center;
+  }
+  @include pad {
+    &-md-c {
+      justify-content: center;
+    }
+  }
+}
+.align-items {
+  &-c {
+    align-items: center;
+  }
+  @include pad {
+    &-md-c {
+      align-items: center;
+    }
+  }
+}
+
+.border {
+  border: 1px solid $grey-20;
+  &-r {
+    border-right: 1px solid $linen-dc;
+  }
+  @include mobile {
+    &-sm {
+      border: 1px solid $white;
+    }
+  }
+}
+
+.g-top {
+  &-1_5 {
+    gap: map-get($map: $spacers, $key: 1_5) 0;
+  }
+  &-5 {
+    gap: map-get($map: $spacers, $key: 5) 0;
+  }
+  &-3 {
+    gap: map-get($map: $spacers, $key: 3) 0;
+  }
+  @include mobile {
+    &-sm {
+      &-1_5 {
+        gap: map-get($map: $spacers, $key: 1_5) 0;
+      }
+      &-5 {
+        gap: map-get($map: $spacers, $key: 5) 0;
+      }
+      &-3 {
+        gap: map-get($map: $spacers, $key: 3) 0;
+      }
+    }
+  }
+}
+
+.whitespace-nowrap {
+  white-space: nowrap;
+}
+.opacity {
+  &-70 {
+    opacity: 0.7;
+  }
+}

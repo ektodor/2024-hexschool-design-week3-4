@@ -1,0 +1,11 @@
+.navbar {
+  align-items: center;
+  a {
+    color: $white;
+    border-bottom: 1px solid transparent;
+  }
+  a:hover {
+    transition-duration: 0.2s;
+    border-bottom: 1px solid white;
+  }
+}

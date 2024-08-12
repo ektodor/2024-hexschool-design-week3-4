@@ -1,0 +1,10 @@
+.product-nav {
+  border-bottom: 8px solid transparent;
+  padding: 24px 116px 16px;
+  a {
+    display: block;
+  }
+  &:hover {
+    border-bottom: 8px solid #aa0601;
+  }
+}

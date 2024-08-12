@@ -1,0 +1,38 @@
+.pagination {
+  li {
+    border-right: 1px solid #555555;
+    border-top: 1px solid #555555;
+    border-bottom: 1px solid #555555;
+    width: 100%;
+  }
+  a {
+    display: block;
+    padding: 12px 16px;
+    color: #555555;
+    font-size: 18px;
+    width: 100%;
+    &:hover {
+      background: black;
+      color: white;
+    }
+    @include mobile {
+      font-size: 16px;
+    }
+  }
+  .pagination-up {
+    border-left: 1px solid #555555;
+    font-size: 19px;
+    a {
+      padding: 12px;
+    }
+  }
+  .pagination-down {
+    font-size: 19px;
+    a {
+      padding: 12px;
+    }
+  }
+  @include mobile {
+    width: 100%;
+  }
+}
