@@ -35,4 +35,10 @@
   @include mobile {
     width: 100%;
   }
+  .active {
+    background-color: black;
+    a {
+      color: white;
+    }
+  }
 }

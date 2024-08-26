@@ -8,4 +8,10 @@
     transition-duration: 0.2s;
     border-bottom: 1px solid white;
   }
+  &-h {
+    height: 80px;
+    @include mobile {
+      height: 178px;
+    }
+  }
 }

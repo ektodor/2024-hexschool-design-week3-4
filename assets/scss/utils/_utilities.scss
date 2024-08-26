@@ -312,3 +312,14 @@
     opacity: 0.7;
   }
 }
+
+.-mr-sm-0_75 {
+  @include mobile {
+    margin-right: -0.75rem;
+  }
+}
+.-ml-sm-0_75 {
+  @include mobile {
+    margin-left: -0.75rem;
+  }
+}
